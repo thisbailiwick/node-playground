@@ -12,6 +12,10 @@
         > The modules can be loaded in any order (or even in parallel) because modules delay execution.
         > Unit tests only have to load relevant modules, which keeps them fast.
         > End-to-end tests can use modules to override configuration. 
+      
+      * [$locationProvider.html5Mode](https://docs.angularjs.org/api/ng/provider/$locationProvider#html5Mode) - Use the $locationProvider to configure how the application deep linking paths are stored.
+      * [$routeProvider](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider) - Used for configuring routes.
+          * [example](https://docs.angularjs.org/api/ngRoute/service/$route#example)
 
 
 ###TODO
