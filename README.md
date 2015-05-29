@@ -17,7 +17,8 @@
       * [$locationProvider.html5Mode](https://docs.angularjs.org/api/ng/provider/$locationProvider#html5Mode) - Use the $locationProvider to configure how the application deep linking paths are stored.
       * [$routeProvider](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider) - Used for configuring routes.
           * [example](https://docs.angularjs.org/api/ngRoute/service/$route#example)
-* ###Mean Stack: [thinkster.io](https://thinkster.io/mean-stack-tutorial/)
+          
+* ####Mean Stack: [thinkster.io](https://thinkster.io/mean-stack-tutorial/)
   * References:
     * [ui-router](https://github.com/angular-ui/ui-router/)
 
