@@ -15,9 +15,16 @@ app.controller('MainCtrl', [
 
         // add object into the posts array
         $scope.addPost = function(){
+            if(!$scope.title || $scope.title === ''){return;};
             $scope.posts.push({title: $scope.title, upvotes: 0});
             $scope.title = '';
         };
+
+        // increment upvotes
+        // parameter post is passed by reference
+        $scope.incrementUpvotes = function(post){
+            post.upvotes += 1;
+        }
     }
 ]);
 
