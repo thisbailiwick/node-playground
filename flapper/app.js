@@ -46,6 +46,8 @@ app.controller('MainCtrl', [
     }
 ]);
 
+
+// add controller for single posts and comments page
 app.controller('PostsCtrl', [
     '$scope',
     '$stateParams',
