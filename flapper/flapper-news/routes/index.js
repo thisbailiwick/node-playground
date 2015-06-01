@@ -47,6 +47,6 @@ router.param('post', function(req, res, next, id){
 });
 
 // return a single post
-route.get('/posts/:post', function(req, res){
+router.get('/posts/:post', function(req, res){
     res.json(req.post);
 });
