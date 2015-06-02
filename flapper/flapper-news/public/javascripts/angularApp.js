@@ -18,7 +18,7 @@ app.config([
     }
 ]);
 
-app.factory('posts', [function(){
+app.factory('posts', ['$http', function(){
     var o = {
         posts: []
     };
