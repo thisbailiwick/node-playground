@@ -22,6 +22,15 @@ app.factory('posts', [function(){
     var o = {
         posts: []
     };
+
+    // retrieve posts
+    // It's important to use the angular.copy() method to create a deep copy of the returned data. This ensures that the $scope.posts variable in MainCtrl will also be updated, ensuring the new values are reflect in our view.
+    o.getAll = function(){
+        return $http.get('/posts').success(function(data){
+            angular.copy(data, o.posts);
+        });
+    };
+
     return o;
 }])
 
