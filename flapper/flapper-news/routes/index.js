@@ -57,7 +57,9 @@ router.put('/posts/:post/upvote', function(req, res, next){
         if(err) {return next(err);}
 
         res.json(post);
-    })
+    });
+});
+
 // comments route for a specific post
 router.post('/posts/:post/comments', function(req, res, next){
     var comment = new Comment(req.body);
