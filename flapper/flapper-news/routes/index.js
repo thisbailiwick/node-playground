@@ -83,4 +83,18 @@ router.put('/posts/:comment/upvote', function(req, res, next){
         res.json(comment);
     });
 });
+
+//route for pre-loading comments
+router.param('comment', function(req, res, next, id){
+    var query = Comment.findById(id);
+
+    query.exec(function (err, comment){
+        if(err) {return next(err);}
+        if(!comment) {
+            return next(new Error('can\'t find post'));
+        }
+
+        req.comment = comment;
+        return next();
+    });
 });
