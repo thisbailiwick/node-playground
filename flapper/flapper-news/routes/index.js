@@ -1,16 +1,14 @@
+var mongoose = require('mongoose');
 var express = require('express');
 var router = express.Router();
+var Post = mongoose.model('Post');
+var Comment = mongoose.model('Comment');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-
-module.exports = router;
-
-var mongoose = require('mongoose');
-var Post = mongoose.model('Post');
-var Comment = mongoose.model('Comment');
 
 //get posts
 router.get('/posts', function(req, res, next){
@@ -104,3 +102,5 @@ router.param('comment', function(req, res, next, id){
         return next();
     });
 });
+
+module.exports = router;
