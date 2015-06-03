@@ -13,7 +13,10 @@ router.get('/', function(req, res, next) {
 //get posts
 router.get('/posts', function(req, res, next){
     Post.find(function(err, posts){
-        if(err){return next(err);}
+        if(err){
+            console.log(err)
+            return next(err);
+        }
         res.json(posts);
     });
 });
@@ -34,7 +37,10 @@ router.param('post', function(req, res, next, id){
     var query = Post.findById(id);
 
     query.exec(function (err, post){
-        if(err) {return next(err);}
+        if(err) {
+            console.log(err);
+            return next(err);
+        }
         if(!post) {
             return next(new Error('can\'t find post'));
         }
