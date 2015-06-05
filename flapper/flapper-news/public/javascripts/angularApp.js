@@ -52,7 +52,7 @@ app.factory('posts', ['$http', function(){
     };
 
     return o;
-}])
+}]);
 
 app.controller('MainCtrl', [
     '$scope', 'posts',
@@ -62,7 +62,7 @@ app.controller('MainCtrl', [
 
         // add object into the posts array
         $scope.addPost = function(){
-            if(!$scope.title || $scope.title === ''){return;};
+            if(!$scope.title || $scope.title === ''){return;}
             posts.create({
                 title: $scope.title,
                 link: $scope.link
