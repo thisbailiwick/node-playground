@@ -36,7 +36,8 @@
                 </span>
         <!--When iterating over an array, the ng-repeat directive makes an $index variable available along with each item in the array.-->
                 <span>
-                    <a href="#/posts/{{post.id}}">Comments</a>
+                    <!--MongoDB uses the _id property natively, so it's usually easier to just write our application with that in mind rather than have to translate it to an id field, which some might consider more intuitive.-->
+                    <a href="#/posts/{{post._id}}">Comments</a>
                 </span>
     </div>
     <form ng-submit="addPost()" style="margin-top:30px;">
