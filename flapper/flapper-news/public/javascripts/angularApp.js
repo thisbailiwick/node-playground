@@ -63,6 +63,11 @@ app.factory('posts', ['$http', function(){
         });
     };
 
+    //add a comment
+    o.addComment = function(id, comment){
+        return $http.post('/posts/' + id + '/comments', comment);
+    };
+
     return o;
 }]);
 
@@ -103,11 +108,13 @@ app.controller('PostsCtrl', [
 
         $scope.addComment = function(){
             if($scope.body == ''){reuturn;}
-            $scope.post.comments.push({
+            posts.addComment(post._id, {
                 body: $scope.body,
-                author: 'user',
-                upvotes: 0
+                author: 'user'
+            }).success(function(comment){
+                $scope.post.comments.push(comment);
             });
+
             $scope.body = '';
         };
     }
