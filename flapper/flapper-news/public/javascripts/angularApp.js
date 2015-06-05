@@ -63,6 +63,10 @@ app.controller('MainCtrl', [
         // add object into the posts array
         $scope.addPost = function(){
             if(!$scope.title || $scope.title === ''){return;};
+            posts.create({
+                title: $scope.title,
+                link: $scope.link
+            });
 
             $scope.title = '';
             $scope.link = '';
