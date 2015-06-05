@@ -42,6 +42,15 @@ app.factory('posts', ['$http', function(){
             o.posts.push(data);
         });
     };
+
+    //upvote
+    o.upvote = function(post){
+        return $http.put('/posts/' + post._id + '/upvote')
+            .success(function(data){
+            post.upvotes += 1;
+        });
+    };
+
     return o;
 }])
 
@@ -62,7 +71,7 @@ app.controller('MainCtrl', [
         // increment upvotes
         // parameter post is passed by reference
         $scope.incrementUpvotes = function(post){
-            post.upvotes += 1;
+            posts.upvote(post);
         }
     }
 ]);
