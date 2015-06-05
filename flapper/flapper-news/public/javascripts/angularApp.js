@@ -36,6 +36,13 @@ app.factory('posts', ['$http', function(){
         });
     };
 
+    // retrieve single post
+    o.get = function(id){
+        return $http.get('/posts/' + id).then(function(res){
+            return res.data;
+        });
+    };
+
     //create post
     o.create = function(post){
         return $http.post('/posts', post).success(function(data){
