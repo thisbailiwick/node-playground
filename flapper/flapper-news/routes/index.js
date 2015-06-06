@@ -111,7 +111,7 @@ router.param('comment', function(req, res, next, id){
     });
 });
 
-// endpoint for authentication, returns JWT token
+// endpoint for registration, returns JWT token
 router.post('/register', function(req, res, next){
     if(!req.body.username || !req.body.password){
         return res.status(400).json({message: 'Please fill out all fields'});
