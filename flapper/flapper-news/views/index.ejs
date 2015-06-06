@@ -41,6 +41,9 @@
                         {{post.title}}
                     </span>
                 </span>
+        <span ng-show="post.author">
+            posted by <a>{{post.author}}</a> |
+        </span>
         <!--When iterating over an array, the ng-repeat directive makes an $index variable available along with each item in the array.-->
                 <span>
                     <!--MongoDB uses the _id property natively, so it's usually easier to just write our application with that in mind rather than have to translate it to an id field, which some might consider more intuitive.-->
