@@ -28,7 +28,7 @@ router.get('/posts', function(req, res, next){
 //save posts
 router.post('/posts', auth, function(req, res, next){
     var post = new Post(req.body);
-
+    post.author = req.payload.username;
     post.save(function(err, post){
         if(err){return next(err); }
 
