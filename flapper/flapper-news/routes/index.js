@@ -73,7 +73,7 @@ router.put('/posts/:post/upvote', auth, function(req, res, next){
 });
 
 // comments route for a specific post
-router.post('/posts/:post/comments', function(req, res, next){
+router.post('/posts/:post/comments', auth, function(req, res, next){
     var comment = new Comment(req.body);
     comment.post = req.post;
 
