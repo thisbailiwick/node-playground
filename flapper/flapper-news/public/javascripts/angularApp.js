@@ -103,7 +103,7 @@ angular.module('flapperNews', ['ui.router'])
         auth.currentUser = function(){
             if(auth.isLoggedIn()){
                 var token = auth.getToken();
-                var paylaod = JSON.parse($window.atob(token.split('.')[1]));
+                var payload = JSON.parse($window.atob(token.split('.')[1]));
 
                 return payload.username;
             }
