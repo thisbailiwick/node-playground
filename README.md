@@ -21,6 +21,7 @@
 * ####Mean Stack: [thinkster.io](https://thinkster.io/mean-stack-tutorial/)
   * References:
     * [ui-router](https://github.com/angular-ui/ui-router/)
+  * [Live Demo](http://pickleweb.pw:8084) - Tutorial not finished yet.
 
 ###TODO
 * [MEAN, thinkster.io](https://thinkster.io/mean-stack-tutorial/)
