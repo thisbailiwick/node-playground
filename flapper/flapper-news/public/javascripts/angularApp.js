@@ -80,6 +80,13 @@ angular.module('flapperNews', ['ui.router'])
 .factory('auth', ['$http', '$window', function($http, $window){
         var auth = {};
 
+        auth.saveToken = function(token){
+            $window.localStorage['flapper-news-token'] = token;
+        };
+
+        auth.getToken = function(){
+            return $window.localStorage['flapper-news-token'];
+        }
         return auth;
 }])
 .controller('MainCtrl', [
