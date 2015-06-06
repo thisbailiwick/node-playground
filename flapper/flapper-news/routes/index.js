@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
 router.get('/posts', function(req, res, next){
     Post.find(function(err, posts){
         if(err){
-            console.log(err)
+            console.log(err);
             return next(err);
         }
         res.json(posts);
