@@ -77,6 +77,11 @@ angular.module('flapperNews', ['ui.router'])
 
     return o;
 }])
+.factory('auth', ['$http', '$window', function($http, $window){
+        var auth = {};
+
+        return auth;
+}])
 .controller('MainCtrl', [
     '$scope', 'posts',
     function($scope, posts){
