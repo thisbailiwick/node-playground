@@ -27,7 +27,7 @@ angular.module('flapperNews', ['ui.router'])
         $urlRouterProvider.otherwise('home');
     }
 ])
-.factory('posts', ['$http', function(){
+.factory('posts', ['$http', function($http){
     var o = {
         posts: []
     };
