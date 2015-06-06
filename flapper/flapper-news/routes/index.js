@@ -4,6 +4,7 @@ var router = express.Router();
 var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
 var passport = require('passport');
+var User = mongoose.model('User');
 
 
 /* GET home page. */
