@@ -26,7 +26,7 @@ router.get('/posts', function(req, res, next){
 });
 
 //save posts
-router.post('/posts', function(req, res, next){
+router.post('/posts', auth, function(req, res, next){
     var post = new Post(req.body);
 
     post.save(function(err, post){
