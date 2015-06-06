@@ -6,7 +6,7 @@ var Comment = mongoose.model('Comment');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
