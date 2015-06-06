@@ -115,6 +115,12 @@ angular.module('flapperNews', ['ui.router'])
             });
         };
 
+        auth.logIn = function(user){
+            return $http.post('/login', user).success(function(data){
+                auth.savetoken(data.token);
+            });
+        };
+
         return auth;
 }])
 .controller('MainCtrl', [
