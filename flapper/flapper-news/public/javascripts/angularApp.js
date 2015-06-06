@@ -86,7 +86,9 @@ angular.module('flapperNews', ['ui.router'])
 
         auth.getToken = function(){
             return $window.localStorage['flapper-news-token'];
-        }
+        };
+
+
         return auth;
 }])
 .controller('MainCtrl', [
