@@ -121,6 +121,10 @@ angular.module('flapperNews', ['ui.router'])
             });
         };
 
+        auth.logOut = function(){
+            $window.localStorage.removeItem('flapper-news-token');
+        };
+        
         return auth;
 }])
 .controller('MainCtrl', [
