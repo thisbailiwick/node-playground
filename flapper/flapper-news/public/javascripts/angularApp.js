@@ -107,8 +107,8 @@ angular.module('flapperNews', ['ui.router'])
     '$scope',
     'posts',
     'post',
-    function($scope, $stateParams, posts){
-        $scope.post = posts.posts[$stateParams.id];
+    function($scope, posts, post){
+        $scope.post = post;
 
         $scope.addComment = function(){
             if($scope.body == ''){reuturn;}
