@@ -1,5 +1,5 @@
-var app = angular.module('flapperNews', ['ui.router']);
-app.config([
+angular.module('flapperNews', ['ui.router'])
+.config([
     '$stateProvider',
     '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider){
@@ -26,9 +26,8 @@ app.config([
             });
         $urlRouterProvider.otherwise('home');
     }
-]);
-
-app.factory('posts', ['$http', function(){
+])
+.factory('posts', ['$http', function(){
     var o = {
         posts: []
     };
@@ -77,9 +76,8 @@ app.factory('posts', ['$http', function(){
     };
 
     return o;
-}]);
-
-app.controller('MainCtrl', [
+}])
+.controller('MainCtrl', [
     '$scope', 'posts',
     function($scope, posts){
         // Now any change or modification made to $scope.posts will be stored in the service and immediately accessible by any other module that injects the posts service.
@@ -103,11 +101,9 @@ app.controller('MainCtrl', [
             posts.upvote(post);
         }
     }
-]);
-
-
+])
 // add controller for single posts and comments page
-app.controller('PostsCtrl', [
+.controller('PostsCtrl', [
     '$scope',
     'posts',
     'post',
