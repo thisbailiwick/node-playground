@@ -5,9 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 // connect to mongo
 //this needs to go before the call to ./routes/index!!
 var mongoose = require('mongoose');
+var passport = require('passport');
 require('./models/Posts');
 require('./models/Comments');
 
