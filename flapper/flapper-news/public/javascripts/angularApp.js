@@ -154,10 +154,11 @@ angular.module('flapperNews', ['ui.router'])
         return auth;
 }])
 .controller('MainCtrl', [
-    '$scope', 'posts',
-    function($scope, posts){
+    '$scope', 'posts', 'auth',
+    function($scope, posts, auth){
         // Now any change or modification made to $scope.posts will be stored in the service and immediately accessible by any other module that injects the posts service.
         $scope.posts = posts.posts;
+        $scope.isLoggedIn = auth.isLoggedIn;
 
         // add object into the posts array
         $scope.addPost = function(){
