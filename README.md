@@ -24,7 +24,6 @@
   * [Live Demo](http://pickleweb.pw:8084) - Tutorial not finished yet.
 
 ###TODO
-* [MEAN, thinkster.io](https://thinkster.io/mean-stack-tutorial/)
 * [RESTful API Design With NodeJS & Restify](http://code.tutsplus.com/tutorials/restful-api-design-with-nodejs-restify--cms-22637)
 * [Building a Restful API Using Node and Express ](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
 * [How To Write A Simple Node.js/MongoDB Web Service for an iOS App](http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-app)
