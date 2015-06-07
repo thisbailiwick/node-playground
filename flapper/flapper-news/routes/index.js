@@ -18,7 +18,6 @@ router.get('/', function(req, res) {
 router.get('/posts', function(req, res, next){
     Post.find(function(err, posts){
         if(err){
-            console.log(err);
             return next(err);
         }
         res.json(posts);
@@ -42,7 +41,6 @@ router.param('post', function(req, res, next, id){
 
     query.exec(function (err, post){
         if(err) {
-            console.log(err);
             return next(err);
         }
         if(!post) {
