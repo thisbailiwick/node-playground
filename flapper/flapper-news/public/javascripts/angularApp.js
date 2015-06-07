@@ -176,7 +176,7 @@ angular.module('flapperNews', ['ui.router'])
         // parameter post is passed by reference
         $scope.incrementUpvotes = function(post){
             posts.upvote(post);
-        }
+        };
     }
 ])
 // add controller for single posts and comments page
