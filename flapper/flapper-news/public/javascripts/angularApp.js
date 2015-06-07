@@ -143,7 +143,7 @@ angular.module('flapperNews', ['ui.router'])
 
         auth.logIn = function(user){
             return $http.post('/login', user).success(function(data){
-                auth.savetoken(data.token);
+                auth.saveToken(data.token);
             });
         };
 
@@ -212,7 +212,7 @@ angular.module('flapperNews', ['ui.router'])
 
         $scope.register = function(){
             auth.register($scope.user).error(function(error){
-                $scop.error = error;
+                $scope.error = error;
             }).then(function(){
                 $state.go('home');
             });
