@@ -103,7 +103,7 @@ angular.module('flapperNews', ['ui.router'])
 
     return o;
 }])
-.factory('auth', ['$http', '$window', function($http, $window){
+.factory('auth', ['$http', '$window', '$rootScope', function($http, $window){
         var auth = {};
 
         auth.saveToken = function(token){
