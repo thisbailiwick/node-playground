@@ -1,7 +1,6 @@
 ###A Collection of Implemented Node Themed Tutorial's
 
 * ####Node starter kit (starter_app): [scotch.io](https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application)
-  * [Live Demo](http://pickleweb.pw:8083/)
   * References:
       * [angular.module] (https://docs.angularjs.org/guide/module)
         > Most applications have a main method that instantiates and wires together the different parts of the application.
@@ -21,7 +20,7 @@
 * ####Mean Stack: [thinkster.io](https://thinkster.io/mean-stack-tutorial/)
   * References:
     * [ui-router](https://github.com/angular-ui/ui-router/)
-  * [Live Demo](http://pickleweb.pw:8084) - Tutorial not finished yet.
+  * Tutorial not finished yet.
 
 ###TODO
 * [RESTful API Design With NodeJS & Restify](http://code.tutsplus.com/tutorials/restful-api-design-with-nodejs-restify--cms-22637)
